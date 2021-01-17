@@ -29,12 +29,11 @@ for k in range(l+1):
     county_ = county(k)
 
     zip_box = driver.find_element_by_xpath('//*[@id="ui_zip"]')
-    zip_box.send_keys('0')
-    zip_box.send_keys(int(zip_))
+    zip_box.send_keys(zip_)
     time.sleep(1)
     search_btm = driver.find_element_by_xpath('//*[@id="search"]/p[2]/input[2]')
     search_btm.click()
-    time.sleep(5)
+    time.sleep(1)
     output = driver.find_elements_by_xpath('//*[@id="details_table"]/table/tbody/tr')
     output_data = [city_,zip_,county_]
 
