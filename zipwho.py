@@ -13,7 +13,7 @@ from basic import sheet_length,zip_code,county,city,save_cred
 
 chrome_path = which('chromedriver.exe')
 chrome_options = Options()
-# chrome_options.add_argument('--headless')
+chrome_options.add_argument('--headless')
 chrome_options.add_argument("--disable-notifications")
 chrome_options.add_argument("start-maximized")
 

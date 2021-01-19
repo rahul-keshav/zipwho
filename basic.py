@@ -38,7 +38,11 @@ dict1 = {
 clmn = list(dict1.keys())
 
 def save_cred(output_data):
-    df2 = pd.DataFrame(dict1)    
+    try:
+        df2 = pd.read_csv('zipcode.csv')
+    except:
+        df2 = pd.DataFrame(dict1)
+       
     df0 = pd.DataFrame([output_data], columns=clmn)
     df = df2.append(df0,ignore_index=True)    
     df.to_csv('zipcode.csv',index=False)
