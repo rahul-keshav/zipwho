@@ -1,5 +1,14 @@
 import pandas as pd
-sheet =  pd.read_excel('NJ_ZipCode_List_lookup.xlsx')
+import tkinter as tk 
+from tkinter import filedialog
+
+root = tk.Tk()
+root.withdraw()
+
+file_path = filedialog.askopenfilename()
+
+
+sheet =  pd.read_excel(file_path)
 sheet = sheet.astype(str)
 def sheet_length():
     return len(sheet.index)
