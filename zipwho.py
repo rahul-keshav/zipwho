@@ -23,7 +23,7 @@ driver = webdriver.Chrome(executable_path = chrome_path,options=chrome_options)
 driver.get("http://zipwho.com/")
 time.sleep(5)
 l = sheet_length()
-for k in range(l+1):
+for k in range(l):
     city_= city(k)
     zip_ = zip_code(k)
     county_ = county(k)
